@@ -5,18 +5,16 @@ Output: 1
 
 from typing import List
 
-
 class Solution:
     def countMatches(self, items: List[List[str]], ruleKey: str, ruleValue: str) -> int:
         counter = 0
         for item in items:
-            # for element in item:
-                if ruleKey == "type" and ruleValue == item[0]:
-                    counter = counter + 1
-                if ruleKey == "color" and ruleValue == item[1]:
-                    counter = counter + 1
-                if ruleKey == "name" and ruleValue == item[2]:
-                    counter = counter + 1
+            if ruleKey == "type" and ruleValue == item[0]:
+                counter = counter + 1
+            if ruleKey == "color" and ruleValue == item[1]:
+                counter = counter + 1
+            if ruleKey == "name" and ruleValue == item[2]:
+                counter = counter + 1
 
         return counter
 
